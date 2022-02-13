@@ -1,0 +1,14 @@
+.footerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footerWrapper a {
+    color: #28708d;
+    font-weight: bold;
+    transition: color 150ms ease-in;
+    will-change: color;
+}
+.footerWrapper a:hover {
+    color: #194557;
+}

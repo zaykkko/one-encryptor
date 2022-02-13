@@ -1,0 +1,62 @@
+:root {
+    /* Haría falta programar el Dark Mode mediante @media(prefers-color-scheme: dark) pero no es algo solicitado */
+    --body-bg-light-color: #fff;
+
+    --textbox-bg-light-color: #fff;
+    --textbox-text-light-color: #585858;
+    --textbox-btn-text-light-color: #fff;
+    --textbox-btn-bg-light-color: #605e5e;
+    --textbox-btn-hover-light-color: #474646;
+    --textbox-btn-active-light-color: #3a3939;
+    --textbox-reminder-text-light-color: #9c9c9c;
+    --textbox-border-light-color: #808080;
+    --textbox-border-hover-light-color: #42bdee;
+    --textbox-border-focus-light-color: #39a5cf;
+    --textbox-outline-focus-light-color: rgba(61, 181, 228, 0.5);
+
+    --info-svg-fill-light-color: #28708d;
+
+    --submit-btn-text-light-color: #fff;
+    --submit-btn-bg-light-color: #28708d;
+    --submit-btn-hover-light-color: #1f576d;
+    --submit-btn-active-light-color: #174355;
+
+    --submit-2nd-btn-text-light-color: #194151;
+    --submit-2nd-btn-border-light-color: #28708d;
+    --submit-2nd-btn-bg-light-color: rgba(40, 112, 141, 0.13);
+    --submit-2nd-btn-hover-light-color: rgba(40, 112, 141, 0.35);
+    --submit-2nd-btn-active-light-color: rgba(40, 112, 141, 0.52);
+}
+body {
+    background: var(--body-bg-light-color);
+}
+h1,
+h3,
+h4 {
+    color: #000;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+h1 {
+    font-weight: bold;
+}
+input,
+textarea,
+button {
+    font-size: 1.17em;
+    font-family: "Nunito Sans", sans-serif;
+
+    outline: none;
+    border: none;
+}
+.appMount {
+    display: grid;
+    gap: 1em;
+    padding: 1.5em;
+}
+.appMount .mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

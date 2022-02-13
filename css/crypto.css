@@ -1,0 +1,170 @@
+.cryptoWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+}
+.cryptoWrapper .cryptoResult {
+    flex: 0 0 20em;
+    padding: 1.2em;
+    background-color: var(--textbox-bg-light-color);
+    color: var(--textbox-text-light-color);
+    border-radius: 1em;
+    border: 2px solid var(--textbox-border-light-color);
+    overflow: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.cryptoWrapper .cryptoResult .cryptoResultBox {
+    display: flex;
+    flex-grow: 1;
+}
+.cryptoWrapper .cryptoResult .cryptoResultBox.cryptoResultJustified {
+    justify-content: center;
+}
+.cryptoWrapper
+    .cryptoResult
+    .cryptoResultBox:not(.cryptoResultJustified)
+    > h3:nth-child(1) {
+    display: none;
+}
+.cryptoWrapper .cryptoResult .cryptoResultBox h3,
+.cryptoWrapper .cryptoResult h4 {
+    pointer-events: none;
+    user-select: none;
+}
+.cryptoWrapper .cryptoResult .cryptoResultBox h3 {
+    color: var(--textbox-text-light-color);
+    word-break: break-word;
+}
+.cryptoWrapper .cryptoResult .cryptoResultBox h3:nth-child(1) {
+    text-align: center;
+    align-self: center;
+    font-weight: bold;
+}
+.cryptoWrapper .cryptoResult h4 {
+    color: var(--textbox-reminder-text-light-color);
+    text-align: center;
+    margin-top: auto;
+}
+.cryptoWrapper .cryptoResult button {
+    cursor: pointer;
+    border-radius: 1em;
+    padding: 0.5em;
+    color: var(--textbox-btn-text-light-color);
+    background-color: var(--textbox-btn-bg-light-color);
+    backface-visibility: hidden; /*https://stackoverflow.com/a/16878602/10942774*/
+    transition: background-color 350ms, transform 150ms;
+    will-change: background-color; /* Por alguna extraña razón incluír transform en esta propiedad, provocaba ese efecto blurry del texto al ajustar su tamaño */
+}
+.cryptoWrapper .cryptoResult button:hover {
+    cursor: pointer;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: var(--textbox-btn-hover-light-color);
+}
+.cryptoWrapper .cryptoResult button:active {
+    transform: translateZ(0) scale(0.95);
+    background-color: var(--textbox-btn-active-light-color);
+}
+.cryptoWrapper .cryptoForm {
+    display: flex;
+    flex: 1 1 0px;
+    flex-direction: column;
+    gap: 1em;
+}
+.cryptoWrapper .cryptoForm .formTextfield {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+}
+.cryptoWrapper .cryptoForm .formTextfield textarea {
+    flex: 1 1 0px;
+    padding: 1em;
+    height: 65vh;
+    min-height: 20em;
+    background-color: var(--textbox-bg-light-color);
+    color: var(--textbox-text-light-color);
+    resize: vertical;
+    border-radius: 0.5em;
+    border: 2px solid var(--textbox-border-light-color);
+    transition: outline 200ms, border-color 250ms ease-in;
+    will-change: outline, border-color;
+}
+.cryptoWrapper .cryptoForm .formTextfield textarea:hover {
+    border-color: var(--textbox-border-hover-light-color);
+}
+.cryptoWrapper .cryptoForm .formTextfield textarea:focus {
+    border-color: var(--textbox-border-focus-light-color);
+    outline: 3px solid var(--textbox-outline-focus-light-color);
+}
+.cryptoWrapper .cryptoForm .formButtonsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.cryptoWrapper .cryptoForm .formButtonsWrapper .formButtonsArea {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.cryptoWrapper .cryptoForm .formButtonsWrapper .formButtonsArea button {
+    flex: 1 1 0;
+    border-radius: 1em;
+    padding: 0.5em;
+    color: var(--submit-btn-text-light-color);
+    cursor: pointer;
+    background-color: var(--submit-btn-bg-light-color);
+    transition: background-color 350ms, transform 150ms;
+    will-change: background-color; /* Por alguna extraña razón incluír transform en esta propiedad, provocaba ese efecto blurry del texto al ajustar su tamaño, culpa del browser ig. */
+}
+.cryptoWrapper .cryptoForm .formButtonsWrapper .formButtonsArea button:hover {
+    background-color: var(--submit-btn-hover-light-color);
+}
+.cryptoWrapper .cryptoForm .formButtonsWrapper .formButtonsArea button:active {
+    transform: translateZ(0) scale(0.95);
+    background-color: var(--submit-btn-active-light-color);
+}
+.cryptoWrapper
+    .cryptoForm
+    .formButtonsWrapper
+    .formButtonsArea
+    button:nth-child(2) {
+    background-color: var(--submit-2nd-btn-bg-light-color);
+    color: var(--submit-2nd-btn-text-light-color);
+    border: 0.13em solid var(--submit-2nd-btn-border-light-color);
+}
+.cryptoWrapper
+    .cryptoForm
+    .formButtonsWrapper
+    .formButtonsArea
+    button:nth-child(2):hover {
+    background-color: var(--submit-2nd-btn-hover-light-color);
+}
+.cryptoWrapper
+    .cryptoForm
+    .formButtonsWrapper
+    .formButtonsArea
+    button:nth-child(2):active {
+    background-color: var(--submit-2nd-btn-active-light-color);
+}
+.cryptoWrapper .cryptoForm .formButtonsWrapper .formButtonsInfo {
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    line-height: 1.5;
+    gap: 0.5em;
+}
+.cryptoWrapper .cryptoForm .formButtonsWrapper .formButtonsInfo svg {
+    fill: var(--info-svg-fill-light-color);
+}
+.cryptoWrapper .cryptoForm .formButtonsWrapper .formButtonsInfo h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+@media screen and (max-width: 50rem) {
+    .cryptoWrapper {
+        flex-direction: column;
+    }
+}

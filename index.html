@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="color-scheme" content="dark light">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador y desencriptador - Challenge ONE</title>
+        <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" href="./css/crypto.css">
+        <link rel="stylesheet" type="text/css" href="./css/footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="appMount">
+            <main class="mainContent">
+                <h1>1. Encriptador y desencriptador - Challenge ONE</h1>
+                <div class="cryptoWrapper">
+                    <form class="cryptoForm">
+                        <div class="formTextfield">
+                            <textarea type="text" name="data_input" placeholder="Ingrese el texto a encriptar aquí" spellcheck="false"></textarea>
+                        </div>
+                        <div class="formButtonsWrapper">
+                            <div class="formButtonsInfo">
+                                <svg viewBox="0 0 28 28" width="25" height="25">
+                                    <path d="M13.983,0C6.261,0,0.001,6.259,0.001,13.979c0,7.724,6.26,13.984,13.982,13.984s13.98-6.261,13.98-13.984 C27.963,6.259,21.705,0,13.983,0z M13.983,26.531c-6.933,0-12.55-5.62-12.55-12.553c0-6.93,5.617-12.548,12.55-12.548 c6.931,0,12.549,5.618,12.549,12.548C26.531,20.911,20.913,26.531,13.983,26.531z"/>
+                                    <polygon points="15.579,17.158 16.191,4.579 11.804,4.579 12.414,17.158"/>
+                                    <path d="M13.998,18.546c-1.471,0-2.5,1.029-2.5,2.526c0,1.443,0.999,2.528,2.444,2.528h0.056c1.499,0,2.469-1.085,2.469-2.528 C16.441,19.575,15.468,18.546,13.998,18.546z"/>
+                                </svg>
+                                <h3>Introduce, si es posible, únicamente carácteres alfabéticos.</h3>
+                            </div>
+                            <div class="formButtonsArea">
+                                <button type="submit" name="encrypt">Encriptar</button>
+                                <button type="submit" name="decrypt">Desencriptar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="cryptoResult" id="crypto-result-box">
+                        <div class="cryptoResultBox cryptoResultJustified">
+                            <h3>Al parecer aún no has introducido nada que podamos hacer...<br>¡al menos intenta con un "hola"!</h3>
+                            <h3 id="crypto-result"></h3>
+                        </div>
+                        <button id="copy-button" title="Presiona aquí para copiar el contenido">Copiar</button>
+                    </div>
+                </div>
+            </main>
+            <footer class="footerWrapper">
+                <h4>Hecho por <a href="https://github.com/xZayk0" target="blank">xZayk0</a>.</h4>
+                <h4>;)</h4>
+            </footer>
+        </div>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
